@@ -1,0 +1,246 @@
+:root {
+    --font: 'Quicksand';
+}
+
+@media (max-width: 400px) {}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: var(--font);
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+#welcome-section {
+    height: inherit;
+    background-color: #101010;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: var(--font);
+    text-align: center;    
+    margin: 20px;
+}
+
+.paragraph {
+    font-size: 40pt;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.heart {
+    font-size: 30pt;
+    background: -webkit-linear-gradient(#5a4594, #e0437a, #fc5151);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity .5s ease-out;
+}
+
+.heart-blink {
+    opacity: 0.6;
+}
+
+.willkommen {
+    font-size: 36pt;
+    font-weight: 300;
+}
+
+.arrow {
+    margin: 15px;
+    font-size: 18pt;
+    transition: opacity .5s ease-out;
+}
+
+.arrow-blink {
+    opacity: 0.4;
+}
+
+.skills {
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(180deg, #5a4594, #e0437a, #fc5151);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#about {
+    height: inherit;
+    background-color: #101010;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 24pt;
+    margin: 20px;
+    background: -webkit-linear-gradient(180deg, #5a4594, #e0437a, #fc5151);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    background-image: url(https://i.ibb.co/qkYqWJQ/malika.png);
+    margin: 30px;
+    border-radius: 50%;
+    transition: filter .2s ease-out;
+}
+
+.photo:hover {
+    filter: brightness(1.1);
+}
+
+article {
+    width: 700px;
+    margin: 30px;
+    line-height: 1.6;
+    font-size: 12pt;
+    font-weight: 300;
+}
+
+.article-paragraph {
+    margin: 10px 0px;
+}
+
+.fa-angle-right {
+    color: #446eb2;
+    margin-right: 7px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 10px 10px 10px 2px;
+    padding-left: 5px;
+    border-left: 2px solid #446eb2;
+}
+
+li {
+    margin: 10px;
+}
+
+.link-li {
+    display: inline-block;
+    transition: 0.2s ease-out;
+}
+
+.link-li:hover {
+    color: #446eb2;
+    transform: translate(10px);
+}
+
+.ribbon {
+    position: relative;
+    top: 7px;
+    left: 7px;
+}
+
+#projects {
+    height: inherit;
+    background-color: #101010;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.single-project {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.single-project-tile {
+    width: inherit;
+    height: 200px;
+    transition: filter .2s ease-out;
+}
+
+.single-project-tile:hover {
+    filter: brightness(1.1);
+}
+
+.single-project-title {
+    width: inherit;
+    padding: 20px;
+    font-size: 14pt;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #446eb210; */
+    transition: background-color .2s ease-out;
+}
+
+.single-project-title:hover {
+    /* background: linear-gradient(270deg, #5a4594, #e0437a, #fc5151); */
+    cursor: pointer;
+    background-color: #446eb2;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#contacts {
+    height: inherit;
+    background-color: #101010;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacts-div {
+    margin: 15px;
+}
+
+.link {
+    display: inline-block;
+    padding: 20px;
+    font-size: 14pt;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+}
+
+.link:hover {
+    color: #446eb2;
+    transform: translate(10px);
+}
