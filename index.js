@@ -64,18 +64,20 @@ for (let link of contactLinks) {
 
 // phone show
 let phone = document.querySelector('#phone');
+let img = '<img src="images/contacts/tel.png" alt="phone">';
 phone.addEventListener('mouseover', () => {
-    phone.innerHTML = '593 95 17 33';
+    phone.innerHTML = img + '593 95 17 33';
 });
 
 phone.addEventListener('mouseout', () => {
-    let img = '<img src="images/contacts/tel.png" alt="phone">';
     phone.innerHTML = img + 'call me';
 });
 
+// click on links
 for (let link of listLinks) {
     link.addEventListener('mouseover', () => {
-        link.innerHTML = fa + link.innerHTML;
+        if (link.innerHTML[0] != fa[0]) // for rocket logo
+            link.innerHTML = fa + link.innerHTML;
         audio.play();
     });
     link.addEventListener('mouseout', () => {
@@ -88,8 +90,6 @@ let active = 0;
 let projects = document.querySelectorAll('.single-project');
 let leftArrow = document.querySelector('#left-arrow');
 let rightArrow = document.querySelector('#right-arrow');
-
-// console.log(projects, leftArrow, rightArrow);
 
 leftArrow.addEventListener('click', () => {
     projects[active].classList.remove('active');
