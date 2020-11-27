@@ -43,12 +43,11 @@ html, body {
 
 .navigation-link {
     display: block;
-    font-size: 18pt;
+    font-size: 16pt;
     margin: 30px;
     position: relative;
 }
 
-/**/
 .navigation-link-mouseover {
     display: none;
 }
@@ -84,8 +83,6 @@ html, body {
     }
 }
 
-/**/
-
 .willkommen {
     font-family: var(--font);
     text-align: center;    
@@ -102,10 +99,20 @@ html, body {
     position: relative;
 }
 
+.decoration-link {
+    font-size: 16pt;
+    padding: 0 25px;
+    transition: .2s ease-out;
+}
+
+.decoration-link:hover {
+    color: var(--cyan);
+}
+
 .magenta, .cyan {
     font-family: 'Poppins';
     font-weight: 200; /* 100 */
-    font-size: 36pt;
+    font-size: 16pt; /* 36pt; */
 }
 
 .magenta {
@@ -118,8 +125,9 @@ html, body {
 }
 
 #cyan-left {
-    position: relative;
-    left: -20px; /* -16 */
+    /* position: relative; */
+    position: absolute;
+    left: 20px; /* -20px; */ /* -16 */
 }
 
 #cyan-right {

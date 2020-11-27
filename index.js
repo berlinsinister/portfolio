@@ -7,6 +7,7 @@ let arrows = document.querySelectorAll('.arrow');
 
 let lettersCyan = document.querySelectorAll('.letter-cyan');
 
+let decorationLinks = document.querySelectorAll('.decoration-link');
 let contactLinks = document.querySelectorAll('.contact-link');
 let listLinks = document.querySelectorAll('.link-li');
 
@@ -46,6 +47,13 @@ willkommen.addEventListener('mouseenter', () => {
 });
 
 audio.volume = 0.5;
+
+// click on decoration links
+for (let link of decorationLinks) {
+    link.addEventListener('click', () => {
+        audio.play();
+    });
+}
 
 for (arrow of arrows) {
     arrow.addEventListener('click', () => {
