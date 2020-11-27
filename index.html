@@ -17,41 +17,53 @@
 </head>
 
 <body>
+    <!-- WELCOME -->
     <section class="welcome" id="welcome">
-
-        <!-- NAVIGATION -->
-        <div class="navigation">
+        <!-- scroll navigation -->
+        <!-- navigation is not added on page load. is added later on scroll -->
+        <div class="hidden" id="navigation">
             <ul>
                 <li class="navigation-link">
                     <a href="#welcome">
                         <span class="lnr lnr-heart"></span>
                     </a>
-                    <span class="navigation-link-mouseover rotate">Welcome</span>
+                    <div class="navigation-link-mouseover rotate">
+                        Welcome
+                        <span class="lnr lnr-chevron-left"></span>
+                    </div>
                 </li>
                 <li class="navigation-link">
                     <a href="#about">
                         <span class="lnr lnr-user"></span>
                     </a>
-                    <span class="navigation-link-mouseover rotate">About</span>
+                    <div class="navigation-link-mouseover rotate">
+                        About
+                        <span class="lnr lnr-chevron-left"></span>
+                    </div>
                 </li>
                 <li class="navigation-link">
                     <a href="#projects">
                         <span class="lnr lnr-layers"></span>
                     </a>
-                    <span class="navigation-link-mouseover rotate">Projects</span>
+                    <div class="navigation-link-mouseover rotate">
+                        Projects
+                        <span class="lnr lnr-chevron-left"></span>
+                    </div>
                 </li>
                 <li class="navigation-link">
                     <a href="#contacts">
                         <span class="lnr lnr-location"></span>
                     </a>
-                    <span class="navigation-link-mouseover rotate">Contacts</span>
+                    <div class="navigation-link-mouseover rotate">
+                        Contacts
+                        <span class="lnr lnr-chevron-left"></span>
+                    </div>
                 </li>
             </ul>
         </div>
-
+        <!-- / scroll navigation -->
+        <!-- decoration -->
         <div class="decoration">
-            <!-- <div class="magenta">&lt;</div>
-            <div class="cyan" id="cyan-left">&lt;</div> -->
             <a href="javascript:void(0);" class="decoration-link">
                 <span class="lnr lnr-heart magenta"></span>
                 <span class="lnr lnr-heart cyan" id="cyan-left"></span>
@@ -59,11 +71,7 @@
             <a href="#about" class="decoration-link">
                 <span class="lnr lnr-user"></span>
             </a>
-
             <img src="images/willkommen/willkommen.png" alt="welcome logo" class="willkommen">
-
-            <!-- <div class="magenta">&gt;</div>
-            <div class="cyan" id="cyan-right">&gt;</div> -->
             <a href="#projects" class="decoration-link">
                 <span class="lnr lnr-layers"></span>
             </a>
@@ -71,12 +79,16 @@
                 <span class="lnr lnr-location"></span>
             </a>
         </div>
+        <!-- / decoration -->
         <div class="skills">html / css / sass / javascript / jquery / ajax / react / php / mysql / c++ / git / github
         </div>
         <a href="#about" class="arrow">
             <span class="lnr lnr-chevron-down"></span>
         </a>
     </section>
+    <!-- / WELCOME -->
+
+    <!-- ABOUT -->
     <section class="about" id="about">
         <a href="#welcome" class="arrow">
             <span class="lnr lnr-chevron-up"></span>
@@ -160,6 +172,7 @@
             <span class="lnr lnr-chevron-down"></span>
         </a>
     </section>
+    <!-- / ABOUT -->
 
     <!-- PROJECTS -->
     <section class="projects" id="projects">
@@ -177,7 +190,7 @@
 
             <div class="single-project active fade">
                 <div class="single-project-img">
-                    <a href="#" target="_blank">
+                    <a href="https://berlinsinister.github.io/hedy-lamarr" target="_blank">
                         <img src="images/thumbnails/1.png" alt="Hedy Lamarr">
                     </a>
                     <span>Hedy Lamarr</span>
@@ -505,12 +518,13 @@
             <span class="lnr lnr-chevron-right arrow" id="right-arrow"></span>
 
         </div>
-
-        <!-- CONTACTS -->
         <a href="#contacts" class="arrow">
             <span class="lnr lnr-chevron-down"></span>
         </a>
     </section>
+    <!-- / PROJECTS -->
+
+    <!-- CONTACTS -->
     <section class="contacts" id="contacts">
         <a href="#projects" class="arrow">
             <span class="lnr lnr-chevron-up"></span>
@@ -542,6 +556,7 @@
             </a>
         </div>
     </section>
+    <!-- / CONTACTS -->
 
     <audio id="audio">
         <source

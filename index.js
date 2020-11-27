@@ -1,22 +1,11 @@
-let magentas = document.querySelectorAll('.magenta');
-let cyans = document.querySelectorAll('.cyan');
-
-let willkommen = document.querySelector('.willkommen');
-
-let arrows = document.querySelectorAll('.arrow');
-
-let lettersCyan = document.querySelectorAll('.letter-cyan');
-
-let decorationLinks = document.querySelectorAll('.decoration-link');
-let contactLinks = document.querySelectorAll('.contact-link');
-let listLinks = document.querySelectorAll('.link-li');
-
 let audio = document.querySelector('#audio');
-
 let delay = 2000;
 let random;
 
-// fixed delay
+audio.volume = 0.5;
+
+// fixed delay on magentas
+let magentas = document.querySelectorAll('.magenta');
 setInterval(() => {
     for (let magenta of magentas)
         magenta.classList.toggle('decoration-blink');
@@ -24,7 +13,9 @@ setInterval(() => {
         arrow.classList.toggle('arrow-blink');
 }, delay / 4);
 
-// random delay
+// random delay on cyans
+let cyans = document.querySelectorAll('.cyan');
+let lettersCyan = document.querySelectorAll('.letter-cyan');
 setInterval(() => {
     random = Math.floor(Math.random() * 10);
     // console.log(random);
@@ -35,6 +26,8 @@ setInterval(() => {
     }
 }, delay / random);
 
+// on main image mouse over
+let willkommen = document.querySelector('.willkommen');
 willkommen.addEventListener('mouseenter', () => {
     willkommen.classList.add('mouseenter-x');
     setTimeout(() => {
@@ -46,22 +39,45 @@ willkommen.addEventListener('mouseenter', () => {
     }, 200);
 });
 
-audio.volume = 0.5;
-
 // click on decoration links
+let decorationLinks = document.querySelectorAll('.decoration-link');
 for (let link of decorationLinks) {
     link.addEventListener('click', () => {
         audio.play();
     });
 }
 
+// click on arrows
+let arrows = document.querySelectorAll('.arrow');
 for (arrow of arrows) {
     arrow.addEventListener('click', () => {
         audio.play();
     });
 }
 
-// click on contact
+// click on navigation links
+let navigationLinks = document.querySelectorAll('.navigation-link');
+for (let link of navigationLinks) {
+    link.addEventListener('click', () => {
+        audio.play();
+    });
+}
+
+// mouseover and mouseout on list links
+let listLinks = document.querySelectorAll('.link-li');
+for (let link of listLinks) {
+    link.addEventListener('mouseover', () => {
+        if (link.innerHTML[0] != fa[0]) // for rocket logo
+            link.innerHTML = fa + link.innerHTML;
+        audio.play();
+    });
+    link.addEventListener('mouseout', () => {
+        link.innerHTML = link.innerHTML.slice(falen);
+    });
+}
+
+// mouseover on contact links
+let contactLinks = document.querySelectorAll('.contact-link');
 let fa = '<i class="fa fa-angle-right"></i>';
 let falen = fa.length;
 for (let link of contactLinks) {
@@ -80,18 +96,6 @@ phone.addEventListener('mouseover', () => {
 phone.addEventListener('mouseout', () => {
     phone.innerHTML = img + 'call me';
 });
-
-// click on links
-for (let link of listLinks) {
-    link.addEventListener('mouseover', () => {
-        if (link.innerHTML[0] != fa[0]) // for rocket logo
-            link.innerHTML = fa + link.innerHTML;
-        audio.play();
-    });
-    link.addEventListener('mouseout', () => {
-        link.innerHTML = link.innerHTML.slice(falen);
-    });
-}
 
 // projects slider
 let active = 0;
@@ -119,4 +123,17 @@ rightArrow.addEventListener('click', () => {
         active++;
     projects[active].classList.add('active');
     projects[active].classList.remove('hidden');
+});
+
+// show right navigation bar on scroll
+let navigation = document.querySelector('#navigation');
+window.addEventListener("scroll", () => {
+    let y = window.scrollY;
+    if (y >= 500) {
+        navigation.classList.add('navigation');
+        navigation.classList.remove('hidden');
+    } else {
+        navigation.classList.remove('navigation');
+        navigation.classList.add('hidden');
+    }
 });

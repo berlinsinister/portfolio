@@ -33,6 +33,7 @@ html, body {
     position: relative;
 }
 
+/* scroll navigation */
 .navigation {
     display: flex;
     flex-direction: column;
@@ -52,16 +53,19 @@ html, body {
     display: none;
 }
 
+.navigation-link-mouseover span {
+    padding-left: 10px;
+}
+
 .navigation-link:hover .navigation-link-mouseover {
-    display: block;    
+    display: flex;
+    align-items: center;
     padding: 5px 20px;
-    /* background-color: #101010; */
-    background-color: var(--cyan);
+    color: var(--cyan);
     z-index: 1;
     position: absolute;
-    top: 0;
-    right: 35px;
-    color: white;
+    top: -2px;
+    right: 15px;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-size: 10pt;
@@ -82,6 +86,7 @@ html, body {
         transform: rotate(0deg);
     }
 }
+/* /scroll navigation */
 
 .willkommen {
     font-family: var(--font);
