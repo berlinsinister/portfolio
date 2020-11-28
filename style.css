@@ -97,21 +97,42 @@ html, body {
     transition: .2s ease-out;
 }
 
+/* decoration */
 .decoration {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    position: relative;
+    position: relative; /* for cyan heart so far */
 }
 
 .decoration-link {
     font-size: 16pt;
     padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: .2s ease-out;
 }
 
-.decoration-link:hover {
+.decoration-link-mouseover {
+    display: none;
+}
+
+.decoration-link-mouseover span {
+    padding-bottom: 5px; /* 3px; */
+}
+
+.decoration-link:hover .decoration-link-mouseover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: var(--cyan);
+    position: absolute;
+    top: 120px; /* 117px; */
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+    font-weight: 400;
 }
 
 .magenta, .cyan {
@@ -151,6 +172,7 @@ html, body {
 .mouseenter-y {
     transform: scaleY(1.15);
 }
+/* / decoration */
 
 .skills {
     font-size: 11pt;

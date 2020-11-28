@@ -20,14 +20,14 @@
     <!-- WELCOME -->
     <section class="welcome" id="welcome">
         <!-- scroll navigation -->
-        <!-- navigation is not added on page load. is added later on scroll -->
+        <!-- side navigation is not added on page load. it is added later on scroll -->
         <div class="hidden" id="navigation">
             <ul>
                 <li class="navigation-link">
                     <a href="#welcome">
                         <span class="lnr lnr-heart"></span>
                     </a>
-                    <div class="navigation-link-mouseover rotate">
+                    <div class="navigation-link-mouseover fade">
                         Welcome
                         <span class="lnr lnr-chevron-left"></span>
                     </div>
@@ -36,7 +36,7 @@
                     <a href="#about">
                         <span class="lnr lnr-user"></span>
                     </a>
-                    <div class="navigation-link-mouseover rotate">
+                    <div class="navigation-link-mouseover fade">
                         About
                         <span class="lnr lnr-chevron-left"></span>
                     </div>
@@ -45,7 +45,7 @@
                     <a href="#projects">
                         <span class="lnr lnr-layers"></span>
                     </a>
-                    <div class="navigation-link-mouseover rotate">
+                    <div class="navigation-link-mouseover fade">
                         Projects
                         <span class="lnr lnr-chevron-left"></span>
                     </div>
@@ -54,7 +54,7 @@
                     <a href="#contacts">
                         <span class="lnr lnr-location"></span>
                     </a>
-                    <div class="navigation-link-mouseover rotate">
+                    <div class="navigation-link-mouseover fade">
                         Contacts
                         <span class="lnr lnr-chevron-left"></span>
                     </div>
@@ -64,6 +64,49 @@
         <!-- / scroll navigation -->
         <!-- decoration -->
         <div class="decoration">
+            <div class="decoration-link">
+                <a href="javascript:void(0);">
+                    <span class="lnr lnr-heart magenta"></span>
+                    <span class="lnr lnr-heart cyan" id="cyan-left"></span>
+                </a>
+                <!-- <div class="decoration-link-mouseover fade">
+                    <span class="lnr lnr-chevron-down"></span>
+                    Welcome
+                </div> -->
+            </div>
+            <div class="decoration-link">
+                <a href="#about">
+                    <span class="lnr lnr-user"></span>
+                </a>
+                <div class="decoration-link-mouseover fade">
+                    <span class="lnr lnr-chevron-down"></span>
+                    About
+                </div>
+            </div>
+            <img src="images/willkommen/willkommen.png" alt="welcome logo" class="willkommen">
+            <div class="decoration-link">
+                <a href="#projects">
+                    <span class="lnr lnr-layers"></span>
+                </a>
+                <div class="decoration-link-mouseover fade">
+                    <span class="lnr lnr-chevron-down"></span>
+                    Projects
+                </div>
+            </div>
+            <div class="decoration-link">
+                <a href="#contacts">
+                    <span class="lnr lnr-location"></span>
+                </a>
+                <div class="decoration-link-mouseover fade">
+                    <span class="lnr lnr-chevron-down"></span>
+                    Contacts
+                </div>
+            </div>
+        </div>
+        <!-- / decoration -->
+
+        <!-- decoration -->
+        <!-- <div class="decoration">
             <a href="javascript:void(0);" class="decoration-link">
                 <span class="lnr lnr-heart magenta"></span>
                 <span class="lnr lnr-heart cyan" id="cyan-left"></span>
@@ -78,7 +121,7 @@
             <a href="#contacts" class="decoration-link">
                 <span class="lnr lnr-location"></span>
             </a>
-        </div>
+        </div> -->
         <!-- / decoration -->
         <div class="skills">html / css / sass / javascript / jquery / ajax / react / php / mysql / c++ / git / github
         </div>
